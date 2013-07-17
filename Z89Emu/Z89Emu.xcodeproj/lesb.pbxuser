@@ -1,0 +1,233 @@
+// !$*UTF8*$!
+{
+	1D6058900D05DD3D006BFB54 /* Z89Emu */ = {
+		activeExec = 0;
+		executables = (
+			43A776C4134552A700C88E29 /* Z89Emu */,
+		);
+	};
+	1F3B9A2B0EF2145700286867 /* Z89EmuAppDelegate.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {976, 2080}}";
+			sepNavSelRange = "{1590, 0}";
+			sepNavVisRange = "{975, 1408}";
+		};
+	};
+	1F3B9A2C0EF2145700286867 /* Z89EmuAppDelegate.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {976, 527}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 430}";
+		};
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = 43A776C4134552A700C88E29 /* Z89Emu */;
+		activeTarget = 1D6058900D05DD3D006BFB54 /* Z89Emu */;
+		breakpoints = (
+		);
+		codeSenseManager = 43A776D9134552C500C88E29 /* Code sense */;
+		executables = (
+			43A776C4134552A700C88E29 /* Z89Emu */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					798,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 324397432;
+			PBXWorkspaceStateSaveDate = 324397432;
+		};
+		perUserProjectItems = {
+			43A7776F1347BC6100C88E29 /* PBXTextBookmark */ = 43A7776F1347BC6100C88E29 /* PBXTextBookmark */;
+			43A777711347BC6100C88E29 /* PBXTextBookmark */ = 43A777711347BC6100C88E29 /* PBXTextBookmark */;
+			43A777721347BC6100C88E29 /* PBXTextBookmark */ = 43A777721347BC6100C88E29 /* PBXTextBookmark */;
+			43A777731347BC6100C88E29 /* PBXTextBookmark */ = 43A777731347BC6100C88E29 /* PBXTextBookmark */;
+			43A777741347BC6100C88E29 /* PBXTextBookmark */ = 43A777741347BC6100C88E29 /* PBXTextBookmark */;
+			43A777771347BC6100C88E29 /* PBXTextBookmark */ = 43A777771347BC6100C88E29 /* PBXTextBookmark */;
+			43C4DA881355EC9800A80D2A /* PBXTextBookmark */ = 43C4DA881355EC9800A80D2A /* PBXTextBookmark */;
+		};
+		sourceControlManager = 43A776D8134552C500C88E29 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	43A776C4134552A700C88E29 /* Z89Emu */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 1;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = Z89Emu;
+		savedGlobals = {
+		};
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+		variableFormatDictionary = {
+		};
+	};
+	43A776D8134552C500C88E29 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	43A776D9134552C500C88E29 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	43A7776F1347BC6100C88E29 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 43A777701347BC6100C88E29 /* InAppPurchaseHelper.h */;
+		name = "InAppPurchaseHelper.h: 14";
+		rLen = 0;
+		rLoc = 334;
+		rType = 0;
+		vrLen = 739;
+		vrLoc = 0;
+	};
+	43A777701347BC6100C88E29 /* InAppPurchaseHelper.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = InAppPurchaseHelper.h;
+		path = /ProjectsLes/iBotsTimeBubbles/Classes/InAppPurchaseHelper.h;
+		sourceTree = "<absolute>";
+	};
+	43A777711347BC6100C88E29 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E0F80F5F120A0182005866B8 /* RootViewController.m */;
+		name = "RootViewController.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1155;
+		vrLoc = 134;
+	};
+	43A777721347BC6100C88E29 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1F3B9A2C0EF2145700286867 /* Z89EmuAppDelegate.h */;
+		name = "Z89EmuAppDelegate.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 430;
+		vrLoc = 0;
+	};
+	43A777731347BC6100C88E29 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 506EDC2F102F528A00A389B3 /* HelloWorldScene.h */;
+		name = "HelloWorldScene.h: 27";
+		rLen = 0;
+		rLoc = 614;
+		rType = 0;
+		vrLen = 1036;
+		vrLoc = 0;
+	};
+	43A777741347BC6100C88E29 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 43A777751347BC6100C88E29 /* InAppPurchaseHelper.m */;
+		name = "InAppPurchaseHelper.m: 158";
+		rLen = 0;
+		rLoc = 4966;
+		rType = 0;
+		vrLen = 1427;
+		vrLoc = 2194;
+	};
+	43A777751347BC6100C88E29 /* InAppPurchaseHelper.m */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.objc;
+		name = InAppPurchaseHelper.m;
+		path = /ProjectsLes/iBotsTimeBubbles/Classes/InAppPurchaseHelper.m;
+		sourceTree = "<absolute>";
+	};
+	43A777771347BC6100C88E29 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 506EDC30102F528A00A389B3 /* HelloWorldScene.m */;
+		name = "HelloWorldScene.m: 954";
+		rLen = 0;
+		rLoc = 27061;
+		rType = 0;
+		vrLen = 1389;
+		vrLoc = 24303;
+	};
+	43C4DA881355EC9800A80D2A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 506EDC30102F528A00A389B3 /* HelloWorldScene.m */;
+		name = "HelloWorldScene.m: 1020";
+		rLen = 0;
+		rLoc = 28072;
+		rType = 0;
+		vrLen = 1224;
+		vrLoc = 27104;
+	};
+	506EDC2F102F528A00A389B3 /* HelloWorldScene.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {976, 598}}";
+			sepNavSelRange = "{614, 0}";
+			sepNavVisRange = "{0, 1036}";
+		};
+	};
+	506EDC30102F528A00A389B3 /* HelloWorldScene.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {976, 35737}}";
+			sepNavSelRange = "{28072, 0}";
+			sepNavVisRange = "{27104, 1224}";
+		};
+	};
+	506EE05D10304ED200A389B3 /* cocos2d libraries */ = {
+		activeExec = 0;
+	};
+	E0F80F5F120A0182005866B8 /* RootViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1146, 2327}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{134, 1155}";
+		};
+	};
+	E393348D13385FD900B84CD4 /* Debug.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1011, 5681}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{15328, 1126}";
+		};
+	};
+}

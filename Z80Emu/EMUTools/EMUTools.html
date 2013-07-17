@@ -1,0 +1,253 @@
+<HTML>
+
+<HEAD>
+<TITLE>EMUTools by Marat Fayzullin</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" LINK="#006000" ALINK="#006000" VLINK="#006000">
+<CENTER>
+<FONT COLOR="#FF0000">
+<H1>EMUTools</H1>
+</FONT>
+by <A HREF="http://www.komkon.org/fms/">Marat Fayzullin</A>
+</CENTER>
+<HR>
+
+<H2>What is EMUTools?</H2>
+  <I>EMUTools</I> is a set of simple utilities which I wrote to handle
+various ROM images, play and convert soundtrack files, disassemble
+programs, and perform other small but helpful tasks. <I>EMUTools</I>
+are available from
+<P>
+<CENTER>
+<A HREF="http://www.komkon.org/fms/EMUL8/">
+http://www.komkon.org/fms/EMUL8/
+</A>
+</CENTER>
+<P>
+  All programs will automatically unpack GZIPped files when compiled with
+<I>#define ZLIB</I>. You can find out whether your copy of a program can
+do that by typing its name without parameters: there should be an explicit
+mention of this feature in the help text printed by a program.
+<P>
+
+<H2>Copyright Notice</H2>
+  Both <I>EMUTools</I> and <I>EMULib</I> source code and documentation are
+copyrighted by me, <A HREF="http://www.komkon.org/fms/">Marat Fayzullin</A>.
+Following restrictions apply to these materials:
+<UL>
+<LI>You <U>can use</U> this software <U>for any non-profit purposes</U>
+    as long as you make a proper reference to me.
+<LI>You <U>cannot use</U> this software <U>to gain any kind of profit</U>.
+    This includes putting the software onto CDROMs, using it or its
+    parts in your own commercial or shareware projects, and so on.
+<LI>You <U>cannot distribute</U> this software <U>yourself</U>, even if it
+    is not done for profit. Do not put it to any WWW or FTP sites of your
+    own, make a link to my site instead.
+</UL>
+<P>
+
+<H2>How To Compile EMUTools</H2>
+  If you've obtained the source code version of <I>EMUTools</I>, check
+the Makefile for compilation options first. Your actual Makefile may
+differ from the original one as "make" utilities behave differently on
+various platforms. You may need additional modules from <I>EMULib</I>,
+available at the same WWW site as <I>EMUTools</I>.
+<P>
+
+<H2>How To Use EMUTools?</H2>
+<DL>
+
+<DT>
+<FONT COLOR="#000080"><H3><TT>
+BDIFF [-as] &lt;file1&gt; &lt;file2&gt;
+</FONT></TT></H3>
+<DD>
+BDIFF will compare two binary files and print out the differences side
+by side, in hexadecimal and ASCII formats. Options: 
+<PRE>
+  -a  - Use ANSI color sequences to highlight differing bytes.
+  -s  - Show complete hexadecimal dumps, not only the differences.
+</PRE>
+
+<DT>
+<FONT COLOR="#000080"><H3><TT>
+UNDOUBLE &lt;infile&gt; [&lt;outfile&gt;]
+</FONT></TT></H3>
+<DD>
+UNDOUBLE will check whether the given file contains doubled (quadrupled,
+etc.) copies of the same data and if so, write out a single copy of this
+data into the output file. It will use the standard output if the output
+filename is not given.
+
+<DT>
+<FONT COLOR="#000080"><H3><TT>
+BEHEAD &lt;bytes&gt; [&lt;infile&gt; [&lt;outfile&gt;]]
+</FONT></TT></H3>
+<DD>
+BEHEAD will cut a given number of bytes off the head of the input file
+and write the result into given output file. It will use standard input
+and output if corresponding filenames are omitted.
+
+<DT>
+<FONT COLOR="#000080"><H3><TT>
+DASM6502 [-o&lt;origin&gt;] [-h] &lt;file&gt;
+</FONT></TT></H3>
+<DD>
+  This is a little 6502 disassembler. It will output disassembled code
+of a given binary file. Don't expect anything fancy though. If you are
+using DASM6502 to disassemble a NES/Famicom program, be aware that .NES
+ROM images contain a 16-byte header in the beginning, so you probably
+want to use -o-7FF0 option on them. Options: 
+<PRE>
+  -o  - Count addresses from a given origin (in hexadecimal form,
+        can be negative).
+  -h  - Show original hexadecimal data beside disassembled code.
+</PRE>
+
+<DT>
+<FONT COLOR="#000080"><H3><TT>
+DASMZ80 [-o&lt;origin&gt;] [-h] &lt;file&gt;
+</FONT></TT></H3>
+<DD>
+  This is a little Z80 disassembler. It will output disassembled code
+of a given binary file. Don't expect anything fancy though. Options:
+<PRE>
+  -o  - Count addresses from a given origin (in hexadecimal form,
+        can be negative).
+  -h  - Show original hexadecimal data beside disassembled code.
+</PRE>
+
+<DT>
+<FONT COLOR="#000080"><H3><TT>
+GBDASM [-o&lt;origin&gt;] [-hi] &lt;file&gt;
+</FONT></TT></H3>
+<DD>
+  This is a little GameBoy disassembler. It will output disassembled
+code of a given binary file. Don't expect anything fancy though. GBDASM
+is almost identical to DASMZ80, but recognizes special GameBoy opcodes
+and cartridge headers. Options: 
+<PRE>
+  -o  - Count addresses from a given origin (in hexadecimal form,
+        can be negative).
+  -h  - Show original hexadecimal data beside disassembled code.
+  -i  - Show information from the GameBoy cartridge header.
+</PRE>
+
+<DT>
+<FONT COLOR="#000080"><H3><TT>
+GBLIST [-acfhp] &lt;file1&gt;.GB &lt;file2&gt;.GB ...
+</FONT></TT></H3>
+<DD>
+  GBLIST is a tool to process GameBoy ROM images (.GB files). It extracts
+and verifies cartridge information from the images and may fix invalid
+images if requested. It will also list the images in an easy to read
+format, either as ASCII or as HTML text. GBLIST understands wildcards.
+Options: 
+<PRE>
+  -a  - Use ANSI color sequences to highlight errors.
+  -c  - Check CMP/CRC and file sizes.
+  -f  - Fix CMP/CRC and file sizes. The fixed image will be written
+        into a file with extension .FIX.
+  -h  - Output results in HTML format.
+  -p  - Show supposed producer.
+</PRE>
+  The cartridge attributes which GBLIST shows in its output deserve some
+additional explanation: 
+<PRE>
+   G  - Cartridge is compatible with the "normal" GameBoy.
+   S  - Cartridge is compatible with the Super GameBoy.
+   C  - Cartridge is compatible with the GameBoy Color.
+   J  - Cartridge produced for Japan only.
+   T  - Cartridge contains a timer (MBC3).
+   U  - Cartirdge is a rumble pack (MBC5).
+   R  - Cartridge contains ROM (i.e. [R]eadable).
+   W  - Cartridge contains RAM (i.e. [W]ritable).
+   B  - Cartridge contains battery-backed RAM.
+</PRE>
+  The last attribute is the memory bank controller (MBC) type:
+<PRE>
+   1  - Cartridge contains MBC1 chip.  
+   2  - Cartridge contains MBC2 chip.  
+   3  - Cartridge contains MBC3 chip.  
+   5  - Cartridge contains MBC5 chip.  
+   A  - Cartridge contains HuC1 chip.  
+   B  - Cartridge contains HuC3 chip.  
+</PRE>
+
+<DT>
+<FONT COLOR="#000080"><H3><TT>
+NESLIST [-ahcpd] &lt;file1&gt;.NES &lt;file2&gt;.NES ...
+</FONT></TT></H3>
+<DD>
+  NESLIST is a tool to process NES ROM images (.NES files). It extracts
+and verifies header information from the images, and may fix invalid
+images by truncating the unnecessary data and modifying the headers.
+Additionally, NESLIST will generate separate header files (.HDR) and try
+to write out Pasofami-compatible files, although the latter feature does
+not work very well. NESLIST understands wildcards. Options: 
+<PRE>
+  -a  - Use ANSI color sequences to highlight errors.
+  -h  - Write headers into separate .HDR files.
+  -c  - Check file sizes.
+  -p  - Generate PASOFAMI files: .PRM,.PRG,.CHR.
+  -d  - Check ROMs for doubling and truncate.
+</PRE>
+  The cartridge attributes which NESLIST shows in its output deserve some
+additional explanation: 
+<PRE>
+   V  - Uses two screen buffers with vertical mirroring.
+   H  - Uses two screen buffers with horizontal mirroring.
+   4  - Cartridge has all four screen buffers.
+   B  - Cartridge contains battery-backed RAM.
+   T  - There is a 512-byte trainer.
+   S  - This is a VS-System game.
+</PRE>
+
+<DT>
+<FONT COLOR="#000080"><H3><TT>
+GBALIST [-acfhp] &lt;file1&gt;.GBA &lt;file2&gt;.GBA ...
+</FONT></TT></H3>
+<DD>
+  GBALIST is a tool to process GameBoy Advance ROM images (.GBA files).
+It extracts and verifies header information from the images. GBALIST
+understands wildcards. Options: 
+<PRE>
+  -a  - Use ANSI color sequences to highlight errors.
+  -c  - Check CMP.
+  -f  - Fix CMP. The fixed image will be written into a file
+        with extension .FIX.
+  -h  - Output results in HTML format.
+  -p  - Show supposed producer.
+</PRE>
+
+<DT>
+<FONT COLOR="#000080"><H3><TT>
+FDSLIST &lt;file&gt;.FDS
+</FONT></TT></H3>
+<DD>
+  FDSLIST is a tool to list contents of the Famicom DiskSystem disk
+images (.FDS files). It prints a directory of files contained in one
+or more disk images stored in the given .FDS file. Each disk image
+is 65000 bytes long and corresponds to a single side of an FDS disk.
+There may be multiple images in a single .FDS file.
+
+<DT>
+<FONT COLOR="#000080"><H3><TT>
+FAM2FDS &lt;file&gt;.FAM &lt;file&gt;.FDS
+</FONT></TT></H3>
+<DD>
+  FAM2FDS will convert Famicom DiskSystem disk images from .FAM format
+to the .FDS format supported by
+<A HREF="http://www.komkon.org/fms/iNES/">iNES</A>.
+Simply supply the program with names of the source .FAM file and the
+destination .FDS file.
+
+</DL>
+<HR>
+<I>
+&copy;2001 Copyright by
+<A HREF="http://www.komkon.org/fms/">Marat Fayzullin</A>
+</I>
+</BODY>
+</HTML>
